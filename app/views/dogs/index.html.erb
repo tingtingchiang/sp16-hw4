@@ -1,0 +1,10 @@
+<h1>Dogs for Days</h1>
+<% if !@dogs.blank? %>
+  <% for item in @dogs %>
+  	<p><%= link_to item.name, dog_path(item)%></p>
+  <% end %>
+<% else %>
+    <% for item in @users %>
+  	<p>Name: <%=item.name%>, Email: <%=item.email%></p>
+  <% end %>
+<% end %>
